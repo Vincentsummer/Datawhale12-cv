@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmyCV.a  CMakeFiles/myCV.dir/interpolation.cpp.o
+/usr/bin/ranlib libmyCV.a
