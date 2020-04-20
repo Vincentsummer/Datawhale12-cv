@@ -28,7 +28,7 @@ $$
 
 双线性插值法取像素点 $P$ 邻近的四个整数像素点的像素值，根据各自坐标所占比例（距离）求解该点的像素值。即对 $X,Y$两个方向分别做线性插值运算。
 
-<img src="/home/vincent/Datawhale12-cv/task01/task01.assets/双线性插值-1587353328952.png" alt="双线性插值" style="zoom:50%;" />
+<img src="task01.assets/双线性插值-1587353328952.png" alt="双线性插值" style="zoom:50%;" />
 
 假设欲得到缩放图像素点对应在原图中的像素点 $P(x,y)$ 的值，在原图中其相邻的四个整数像素点及其像素值为 $Q_{11}(x_1,y_1),\ Q_{12}(x_1, y_2), \ Q_{21}(x_2, y_1), \ Q_{22}(x_2, y_2)$。双线性插值法的计算方式如下：
 $$
@@ -166,19 +166,19 @@ int main()
 
 原图：
 
-<img src="/home/vincent/Datawhale12-cv/task01/task01.assets/yuner.jpg" alt="yuner" style="zoom: 80%;" />
+<img src="task01.assets/yuner.jpg" alt="yuner" style="zoom: 80%;" />
 
 0.4倍缩小，双线性插值：
 
-<img src="/home/vincent/Datawhale12-cv/task01/task01.assets/yuner_shrink.jpg" alt="yuner_shrink" style="zoom: 80%;" />
+<img src="task01.assets/yuner_shrink.jpg" alt="yuner_shrink" style="zoom: 80%;" />
 
 1.5倍放大，最近邻插值：
 
-<img src="/home/vincent/Datawhale12-cv/task01/task01.assets/yuner_INTER_NEAREST.jpg" alt="yuner_INTER_NEAREST" style="zoom: 80%;" />
+<img src="task01.assets/yuner_INTER_NEAREST.jpg" alt="yuner_INTER_NEAREST" style="zoom: 80%;" />
 
 1.5倍放大，双线性插值：
 
-<img src="/home/vincent/Datawhale12-cv/task01/task01.assets/yuner_INTER_LINEAR.jpg" alt="yuner_INTER_LINEAR" style="zoom: 80%;" />
+<img src="task01.assets/yuner_INTER_LINEAR.jpg" alt="yuner_INTER_LINEAR" style="zoom: 80%;" />
 
 #### 最近邻插值算法及双线性插值算法的C++实现
 
@@ -272,8 +272,8 @@ inter_linear(shrink, enlarge2, fx, fy);
 
 1.5倍放大，最近邻插值：
 
-<img src="/home/vincent/Datawhale12-cv/task01/task01.assets/yuner_INTER_NEAREST-1587379566640.jpg" alt="yuner_INTER_NEAREST" style="zoom:80%;" />
+<img src="task01.assets/yuner_INTER_NEAREST-1587379566640.jpg" alt="yuner_INTER_NEAREST" style="zoom:80%;" />
 
 1.5倍放大，双线性插值：
 
-<img src="/home/vincent/Datawhale12-cv/task01/task01.assets/yuner_INTER_LINEAR-1587379614175.jpg" alt="yuner_INTER_LINEAR" style="zoom:80%;" />
+<img src="task01.assets/yuner_INTER_LINEAR-1587379614175.jpg" alt="yuner_INTER_LINEAR" style="zoom:80%;" />
