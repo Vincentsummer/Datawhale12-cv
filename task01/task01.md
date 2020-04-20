@@ -88,7 +88,7 @@ $$
 
 ### C++实现
 
-#### OpenCV resize函数实现
+#### OpenCV resize函数实践
 
 函数原型：
 
@@ -180,7 +180,7 @@ int main()
 
 <img src="/home/vincent/Datawhale12-cv/task01/task01.assets/yuner_INTER_LINEAR.jpg" alt="yuner_INTER_LINEAR" style="zoom: 80%;" />
 
-#### 最近邻插值算法及双线性插值算法的C++实现：
+#### 最近邻插值算法及双线性插值算法的C++实现
 
 ```c++
 /** 最近邻插值法 **/ 
