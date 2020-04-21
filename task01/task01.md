@@ -36,17 +36,17 @@ f(P)≈\frac{y_2-y}{y_2-y_1}\left(\frac{x_2-x}{x_2-x_1}f(Q_{11})+\frac{x-x_1}{x_
 \qquad \frac{y-y_1}{y_2-y_1}\left(\frac{x_2-x}{x_2-x_1}f(Q_{12})+\frac{x-x_1}{x_2-x_1}f(Q_{22})\right)
 $$
 
-其中四个整数像素点为相邻点，即 $x_2-x_1 = 1, \ y_2 - y_1 = 1$ ，令 $v=x-x_1, \ u=y-y_1$ 。则上式可转化为：
+其中四个整数像素点为相邻点，即 $x_2-x_1 = 1, \ y_2 - y_1 = 1$ ，令 $u=x-x_1, \ v=y-y_1$ 。则上式可转化为：
 $$
 f(P)≈
 \begin{bmatrix}
-1-v & v
+1-u & u
 \end{bmatrix}
 \begin{bmatrix}
 f(Q_{11}) & f(Q_{12}) \\ f(Q_{21}) & f(Q_{22})
 \end{bmatrix}
 \begin{bmatrix}
-1-u \\ u
+1-v \\ v
 \end{bmatrix}
 $$
 
@@ -58,7 +58,7 @@ $$
 
 #### 向后映射法
 
-向后映射法（或像素填充算法）是输出像素一次一个地映射回到输入像素中，以便确定其灰度级。如果一个输出像素被映射到4个输入像素之间，则其灰度值由插值决定，向后空间变换是向前变换的逆。通常用于从结果图像的坐标计算原图像的坐标。
+向后映射法（或像素填充算法）是输出像素一次一个地映射回到输入像素中，以便确定其灰度级。如果一个输出像素被映射到四个输入像素之间，则其灰度值由插值决定，向后空间变换是向前变换的逆。通常用于从结果图像的坐标计算原图像的坐标。
 
 - 旋转、拉伸、放缩可以使用
 - 解决了漏点的问题，出现了马赛克
@@ -124,7 +124,7 @@ using namespace std;
 
 string yuner = "../image/yuner.jpg";
 
-void vResize()
+void resizeTest()
 {
     Mat img = imread(yuner);
     if (img.empty()){
@@ -159,7 +159,7 @@ void vResize()
 
 int main()
 {
-    vResize();
+    resizeTest();
     return 0;
 }
 ```
