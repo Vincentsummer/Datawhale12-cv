@@ -42,13 +42,13 @@ int resizeTest()
     float fy = 1.5;
     Mat enlarge1, enlarge2;
 //    resize(shrink, enlarge1, Size(), fx, fy, InterpolationFlags::INTER_NEAREST);
-    vincent::inter_nearest(shrink, enlarge1, fx, fy);
+    vincent::resize(shrink, enlarge1, fx, fy, vincent::Interpolation::INTER_NEAREST);
 //    resize(shrink, enlarge2, Size(), fx, fy, InterpolationFlags::INTER_LINEAR);
-    vincent::inter_linear(shrink, enlarge2, fx, fy);
+    vincent::resize(shrink, enlarge2, fx, fy, vincent::Interpolation::INTER_LINEAR);
 
 //    imwrite("../image/yuner_shrink.jpg", shrink);
-    imwrite("../image/yuner_INTER_NEAREST.jpg", enlarge1);
-    imwrite("../image/yuner_INTER_LINEAR.jpg", enlarge2);
+//    imwrite("../image/yuner_INTER_NEAREST.jpg", enlarge1);
+//    imwrite("../image/yuner_INTER_LINEAR.jpg", enlarge2);
 
     // 显示
 //    imshow("src", img);

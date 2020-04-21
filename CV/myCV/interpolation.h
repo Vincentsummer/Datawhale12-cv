@@ -6,19 +6,44 @@
 #define CV_INTERPOLATION_H
 
 #include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+#include <iostream>
 
 using namespace std;
 
 namespace vincent
 {
-    // 最近邻插值法
-    void inter_nearest(cv::Mat& src, cv::Mat& tar, float fx, float fy);
+    enum Interpolation {
+        INTER_NEAREST = 0,
+        INTER_LINEAR = 1,
+        SIZE = 2,
+    };
 
-    // 双线性插值法
+    void test();
+
+    // 图像缩放
+    void resize(cv::Mat& src, cv::Mat& tar, float fx, float fy, int inter = INTER_LINEAR);
+
     template <typename T>
-    T get_scale_value(cv::Mat& src, float x, float y);
-    void inter_linear(cv::Mat& src, cv::Mat& tar, float fx, float fy);
+    class Impl
+    {
+    public:
+        typedef T (*Fun)(cv::Mat&, float, float);
+
+        Impl()
+        {
+            this->funs.emplace_back(inter_nearest);
+            this->funs.emplace_back(inter_linear);
+        }
+
+        vector<Fun> getFuns() {return funs;}
+    private:
+        vector<Fun> funs;
+        // 最近邻插值法
+        static T inter_nearest(cv::Mat& src, float x, float y);
+
+        // 双线性插值法
+        static T inter_linear(cv::Mat& src, float x, float y);
+    };
 
 } // namespace vincent
 

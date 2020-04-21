@@ -35,8 +35,6 @@ myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2
 myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2/highgui.hpp
 myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2/highgui/highgui.hpp
 myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2/imgcodecs.hpp
-myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2/imgproc.hpp
-myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
 myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2/opencv_modules.hpp
 myCV/CMakeFiles/myCV.dir/interpolation.cpp.o: /usr/local/include/opencv4/opencv2/videoio.hpp
 

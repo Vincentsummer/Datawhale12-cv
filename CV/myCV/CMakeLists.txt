@@ -2,9 +2,10 @@ set(myCV_SRC
         interpolation.cpp
         )
 
+#add_executable(myCV ${myCV_SRC})
 add_library(myCV ${myCV_SRC})
-target_link_libraries(myCV)
-
+#target_link_libraries(myCV ${OpenCV_LIBS})
+#
 install(TARGETS myCV DESTINATION lib)
 
 file(GLOB HEADERS "*.h")

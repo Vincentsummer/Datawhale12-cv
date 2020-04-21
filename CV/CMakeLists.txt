@@ -35,6 +35,8 @@ file(GLOB HEADERS "*.h")
 install(FILES ${HEADERS} DESTINATION include/CV)
 
 add_executable(CV main.cpp)
+
+#add_executable(CV main.cpp myCV)
 target_link_libraries(CV myCV ${OpenCV_LIBS})
 
 add_subdirectory(myCV)

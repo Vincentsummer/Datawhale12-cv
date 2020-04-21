@@ -9,11 +9,15 @@
 /home/vincent/Datawhale12-cv/CV/main.cpp
 task01/resizeTest.h
 /home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
+vector
+-
+iostream
+-
 
 /home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
 opencv2/highgui/highgui.hpp
 -
-opencv2/imgproc/imgproc.hpp
+iostream
 -
 
 /home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
@@ -871,10 +875,6 @@ opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/imgproc.hpp
 opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp
-
-/usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
-opencv2/imgproc.hpp
-/usr/local/include/opencv4/opencv2/imgproc/opencv2/imgproc.hpp
 
 /usr/local/include/opencv4/opencv2/ml.hpp
 opencv2/core.hpp

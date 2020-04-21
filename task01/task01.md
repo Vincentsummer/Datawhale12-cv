@@ -100,14 +100,19 @@ src : 输入图像
 dst : 输出图像
 dsize : 输出图像尺寸
 fx，fy : x,y方向上的缩放因子
-INTER_LINEAR ： 插值方法，总共五种
-    1. INTER_NEAREST - 最近邻插值法
-    2. INTER_LINEAR - 双线性插值法（默认）
-    3. INTER_AREA - 基于局部像素的重采样(resampling using pixel area relation)。对于图像抽取(image decimation)来说，这可能是一个更好的方法。但如果是放大图像时，它和最近邻法的效果类似。
-    4. INTER_CUBIC - 基于4x4像素邻域的3次插值法
-    5. INTER_LANCZOS4 - 基于8x8像素邻域的Lanczos插值
+interpolation ： 插值方法
 **/
 ```
+
+resize参数中的五种插值方法：
+
+| interpolation 选项 |                           插值方法                           |
+| :----------------: | :----------------------------------------------------------: |
+|   INTER_NEAREST    |                          最近邻插值                          |
+|    INTER_LINEAR    |                    双线性插值（默认设置）                    |
+|     INTER_AREA     | 使用像素区域关系进行重采样。适于图像抽取，缩放图像它与最近邻法类似。 |
+|    INTER_CUBIC     |                   4x4像素邻域的双三次插值                    |
+|   INTER_LANCZOS4   |                   8x8像素邻域的Lanczos插值                   |
 
 代码实现：
 
