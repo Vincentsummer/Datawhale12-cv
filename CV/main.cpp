@@ -3,16 +3,18 @@
 //
 
 #include "task01/resizeTest.h"
-
-#include <vector>
+#include "task02/transTest.h"
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    resizeTest();
-//    const vector<int> v = {1, 2};
-//    cout << v[0] << endl;
+    myTransTest();
+//    rotateTest();
+//    translationTest();
+//    offsetTest();
+//    test();
+//    resizeTest();
     return 0;
 }

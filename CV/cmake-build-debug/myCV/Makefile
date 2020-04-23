@@ -196,6 +196,33 @@ interpolation.cpp.s:
 	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/interpolation.cpp.s
 .PHONY : interpolation.cpp.s
 
+translation.o: translation.cpp.o
+
+.PHONY : translation.o
+
+# target to build an object file
+translation.cpp.o:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/translation.cpp.o
+.PHONY : translation.cpp.o
+
+translation.i: translation.cpp.i
+
+.PHONY : translation.i
+
+# target to preprocess a source file
+translation.cpp.i:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/translation.cpp.i
+.PHONY : translation.cpp.i
+
+translation.s: translation.cpp.s
+
+.PHONY : translation.s
+
+# target to generate assembly for a file
+translation.cpp.s:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/translation.cpp.s
+.PHONY : translation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +239,9 @@ help:
 	@echo "... interpolation.o"
 	@echo "... interpolation.i"
 	@echo "... interpolation.s"
+	@echo "... translation.o"
+	@echo "... translation.i"
+	@echo "... translation.s"
 .PHONY : help
 
 

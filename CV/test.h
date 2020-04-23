@@ -13,12 +13,21 @@
 using namespace cv;
 using namespace std;
 
-string lena = "../image/lena.jpg";
+//string lena = "image/lena.jpg";
 
 void test()
 {
     Mat image = imread(lena);
-    imshow("image", image);
+    Mat target = Mat::zeros(image.rows * 2, image.cols * 2, image.type());
+
+    for (int i = 0; i < image.rows; i++){
+        for (int j = 0; j < image.cols; j++){
+            target.at<Vec3b>(i + image.rows / 2, j + image.cols / 2) = image.at<Vec3b>(i,j);
+        }
+    }
+    imwrite("image/lena2.jpg", target);
+
+    imshow("target", target);
     waitKey(0);
 }
 

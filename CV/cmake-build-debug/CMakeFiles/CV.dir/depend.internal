@@ -4,7 +4,10 @@
 CMakeFiles/CV.dir/main.cpp.o
  /home/vincent/Datawhale12-cv/CV/main.cpp
  /home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
+ /home/vincent/Datawhale12-cv/CV/myCV/translation.h
  /home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
+ /home/vincent/Datawhale12-cv/CV/task02/transTest.h
+ /home/vincent/Datawhale12-cv/CV/test.h
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/affine.hpp
@@ -12,6 +15,7 @@ CMakeFiles/CV.dir/main.cpp.o
  /usr/local/include/opencv4/opencv2/core/base.hpp
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
  /usr/local/include/opencv4/opencv2/core/check.hpp
+ /usr/local/include/opencv4/opencv2/core/core.hpp
  /usr/local/include/opencv4/opencv2/core/cuda.hpp
  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp

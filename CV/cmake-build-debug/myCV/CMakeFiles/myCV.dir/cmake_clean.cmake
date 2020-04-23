@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/myCV.dir/interpolation.cpp.o"
+  "CMakeFiles/myCV.dir/translation.cpp.o"
   "libmyCV.pdb"
   "libmyCV.a"
 )

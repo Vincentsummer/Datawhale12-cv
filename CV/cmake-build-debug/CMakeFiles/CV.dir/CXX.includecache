@@ -9,8 +9,10 @@
 /home/vincent/Datawhale12-cv/CV/main.cpp
 task01/resizeTest.h
 /home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
-vector
--
+task02/transTest.h
+/home/vincent/Datawhale12-cv/CV/task02/transTest.h
+test.h
+/home/vincent/Datawhale12-cv/CV/test.h
 iostream
 -
 
@@ -20,6 +22,12 @@ opencv2/highgui/highgui.hpp
 iostream
 -
 
+/home/vincent/Datawhale12-cv/CV/myCV/translation.h
+opencv2/opencv.hpp
+-
+interpolation.h
+/home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
+
 /home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
 opencv2/opencv.hpp
 -
@@ -27,6 +35,22 @@ iostream
 -
 ../myCV/interpolation.h
 /home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
+
+/home/vincent/Datawhale12-cv/CV/task02/transTest.h
+opencv2/opencv.hpp
+-
+../myCV/translation.h
+/home/vincent/Datawhale12-cv/CV/myCV/translation.h
+
+/home/vincent/Datawhale12-cv/CV/test.h
+opencv/cv.h
+-
+opencv/highgui.h
+-
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
@@ -99,6 +123,10 @@ opencv2/core/check.hpp
 /usr/local/include/opencv4/opencv2/core/check.hpp
 opencv2/core/base.hpp
 -
+
+/usr/local/include/opencv4/opencv2/core/core.hpp
+opencv2/core.hpp
+/usr/local/include/opencv4/opencv2/core/opencv2/core.hpp
 
 /usr/local/include/opencv4/opencv2/core/cuda.hpp
 opencv2/core.hpp

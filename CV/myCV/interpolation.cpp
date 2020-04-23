@@ -6,9 +6,6 @@
 
 using namespace vincent;
 
-Impl<uchar> interpolationCh1;
-Impl<cv::Vec3b> interpolationCh3;
-
 void vincent::resize(cv::Mat &src, cv::Mat &tar, float fx, float fy, int inter)
 {
     // 计算输出图像的尺寸(四舍五入)
@@ -23,10 +20,10 @@ void vincent::resize(cv::Mat &src, cv::Mat &tar, float fx, float fy, int inter)
         for (int i = 0; i < tar_rows; i++){
             for (int j = 0; j < tar_cols; j++){
                 // 坐标计算
-                float x = i / fy;
-                float y = j / fx;
+                float x = j / fx;
+                float y = i / fy;
 
-                tar.at<uchar>(i, j) = interpolationCh1.getFuns()[inter](src, x, y);
+                tar.at<uchar>(i, j) = interpolationCh1[inter](src, x, y);
             }
         }
     }
@@ -35,10 +32,10 @@ void vincent::resize(cv::Mat &src, cv::Mat &tar, float fx, float fy, int inter)
         for (int i = 0; i < tar_rows; i++){
             for (int j = 0; j < tar_cols; j++){
                 // 坐标计算
-                float x = i / fy;
-                float y = j / fx;
+                float x = j / fx;
+                float y = i / fy;
 
-                tar.at<cv::Vec3b>(i, j) = interpolationCh3.getFuns()[inter](src, x, y);
+                tar.at<cv::Vec3b>(i, j) = interpolationCh3[inter](src, x, y);
             }
         }
     }
@@ -48,8 +45,8 @@ template <typename T>
 T Impl<T>::inter_nearest(cv::Mat &src, float x, float y)
 {
     // 插值计算
-    int i = round(x);
-    int j = round(y);
+    int i = round(y);
+    int j = round(x);
 
     if (i > src.rows - 1) i = src.rows - 1;
     if (j > src.cols - 1) j = src.cols - 1;
@@ -60,8 +57,8 @@ T Impl<T>::inter_nearest(cv::Mat &src, float x, float y)
 template <typename T>
 T Impl<T>::inter_linear(cv::Mat &src, float x, float y)
 {
-    int i = (int) x, j = (int) y;
-    float u = x - i, v = y - j;
+    int i = (int) y, j = (int) x;
+    float u = y - i, v = x - j;
 
     // 边界处理
     if (i >= src.rows - 1 || j >= src.cols - 1)

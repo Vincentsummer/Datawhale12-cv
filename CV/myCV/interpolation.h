@@ -13,15 +13,12 @@ using namespace std;
 namespace vincent
 {
     enum Interpolation {
-        INTER_NEAREST = 0,
-        INTER_LINEAR = 1,
-        SIZE = 2,
+        NEAREST = 0,
+        LINEAR = 1,
     };
 
-    void test();
-
     // 图像缩放
-    void resize(cv::Mat& src, cv::Mat& tar, float fx, float fy, int inter = INTER_LINEAR);
+    void resize(cv::Mat& src, cv::Mat& tar, float fx, float fy, int inter = LINEAR);
 
     template <typename T>
     class Impl
@@ -31,13 +28,22 @@ namespace vincent
 
         Impl()
         {
-            this->funs.emplace_back(inter_nearest);
-            this->funs.emplace_back(inter_linear);
+            funs.emplace_back(inter_nearest);
+            funs.emplace_back(inter_linear);
         }
 
-        vector<Fun> getFuns() {return funs;}
+        Fun operator [] (int i)
+        {
+            if (i < funs.size()) return funs[i];
+            else throw "out of Interpolation!";
+        }
+
     private:
         vector<Fun> funs;
+
+        Impl& operator = (const Impl& i);
+        Impl(const Impl&);
+
         // 最近邻插值法
         static T inter_nearest(cv::Mat& src, float x, float y);
 
@@ -45,6 +51,8 @@ namespace vincent
         static T inter_linear(cv::Mat& src, float x, float y);
     };
 
+    static Impl<uchar> interpolationCh1;
+    static Impl<cv::Vec3b> interpolationCh3;
 } // namespace vincent
 
 #endif //CV_INTERPOLATION_H

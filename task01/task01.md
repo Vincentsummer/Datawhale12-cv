@@ -187,9 +187,73 @@ int main()
 
 #### 最近邻插值算法及双线性插值算法的C++实现
 
+interpolation.h头文件如下：
+
 ```c++
-/** 最近邻插值法 **/ 
-void vincent::inter_nearest(cv::Mat &src, cv::Mat &tar, float fx, float fy)
+#ifndef CV_INTERPOLATION_H
+#define CV_INTERPOLATION_H
+
+#include <opencv2/highgui/highgui.hpp>
+#include <iostream>
+
+using namespace std;
+
+namespace vincent
+{
+    enum Interpolation {
+        NEAREST = 0,
+        LINEAR = 1,
+    };
+
+    // 图像缩放
+    void resize(cv::Mat& src, cv::Mat& tar, float fx, float fy, int inter = LINEAR);
+
+    template <typename T>
+    class Impl
+    {
+    public:
+        typedef T (*Fun)(cv::Mat&, float, float);
+
+        Impl()
+        {
+            funs.emplace_back(inter_nearest);
+            funs.emplace_back(inter_linear);
+        }
+
+        Fun operator [] (int i)
+        {
+            if (i < funs.size()) return funs[i];
+            else throw "out of Interpolation!";
+        }
+
+    private:
+        vector<Fun> funs;
+
+        Impl& operator = (const Impl& i);
+        Impl(const Impl&);
+
+        // 最近邻插值法
+        static T inter_nearest(cv::Mat& src, float x, float y);
+
+        // 双线性插值法
+        static T inter_linear(cv::Mat& src, float x, float y);
+    };
+
+    static Impl<uchar> interpolationCh1;		// 灰度图处理类
+    static Impl<cv::Vec3b> interpolationCh3;	// 彩色图处理类
+} // namespace vincent
+
+#endif //CV_INTERPOLATION_H
+```
+
+interpolation.cpp文件如下：
+
+```c++
+#include "interpolation.h"
+
+using namespace vincent;
+
+void vincent::resize(cv::Mat &src, cv::Mat &tar, float fx, float fy, int inter)
 {
     // 计算输出图像的尺寸(四舍五入)
     int tar_cols = round(src.cols * fx);
@@ -197,31 +261,49 @@ void vincent::inter_nearest(cv::Mat &src, cv::Mat &tar, float fx, float fy)
     // 创建输出图像
     tar = cv::Mat(tar_rows, tar_cols, src.type());
 
-    for (int i = 0; i < tar_rows; i++){
-        for (int j = 0; j < tar_cols; j++){
-            // 插值计算
-            int x = round(i / fy);
-            int y = round(j / fx);
-            // 越界判断
-            if (x > src.rows - 1) x = src.rows - 1;
-            if (y > src.cols - 1) y = src.cols - 1;
+    // 灰度图处理
+    if (src.channels() == 1){
 
-            // 灰度图处理
-            if (src.channels() == 1)
-                tar.at<uchar>(i, j) = src.at<uchar>(x, y);
-            // 彩色图处理
-            else
-                tar.at<cv::Vec3b>(i, j) = src.at<cv::Vec3b>(x, y);
+        for (int i = 0; i < tar_rows; i++){
+            for (int j = 0; j < tar_cols; j++){
+                // 坐标计算
+                float x = j / fx;
+                float y = i / fy;
+                tar.at<uchar>(i, j) = interpolationCh1[inter](src, x, y);
+            }
+        }
+    }
+    // 彩色图处理
+    else {
+        for (int i = 0; i < tar_rows; i++){
+            for (int j = 0; j < tar_cols; j++){
+                // 坐标计算
+                float x = j / fx;
+                float y = i / fy;
+                tar.at<cv::Vec3b>(i, j) = interpolationCh3[inter](src, x, y);
+            }
         }
     }
 }
 
-/** 双线性插值法 **/
 template <typename T>
-T vincent::get_scale_value(cv::Mat &src, float x, float y)
+T Impl<T>::inter_nearest(cv::Mat &src, float x, float y)
 {
-    int i = (int) x, j = (int) y;
-    float u = x - i, v = y - j;
+    // 插值计算
+    int i = round(y);
+    int j = round(x);
+
+    if (i > src.rows - 1) i = src.rows - 1;
+    if (j > src.cols - 1) j = src.cols - 1;
+
+    return src.at<T>(i, j);
+}
+
+template <typename T>
+T Impl<T>::inter_linear(cv::Mat &src, float x, float y)
+{
+    int i = (int) y, j = (int) x;
+    float u = y - i, v = x - j;
 
     // 边界处理
     if (i >= src.rows - 1 || j >= src.cols - 1)
@@ -234,46 +316,9 @@ T vincent::get_scale_value(cv::Mat &src, float x, float y)
 
     return ((1-v)*(1-u)*Q11 + (1-v)*u*Q21 + v*(1-u)*Q12 + v*u*Q22);
 }
-
-void vincent::inter_linear(cv::Mat &src, cv::Mat &tar, float fx, float fy)
-{
-    {
-        // 计算输出图像的尺寸(四舍五入)
-        int tar_cols = round(src.cols * fx);
-        int tar_rows = round(src.rows * fy);
-        // 创建输出图像
-        tar = cv::Mat(tar_rows, tar_cols, src.type());
-
-        for (int i = 0; i < tar_rows; i++){
-            for (int j = 0; j < tar_cols; j++){
-                // 坐标计算
-                float x = i / fy;
-                float y = j / fx;
-
-                // 灰度图处理
-                if (src.channels() == 1)
-                    tar.at<uchar>(i, j) = get_scale_value<uchar>(src, x, y);
-                // 彩色图处理
-                else
-                    tar.at<cv::Vec3b>(i, j) = get_scale_value<cv::Vec3b>(src, x, y);
-            }
-        }
-    }
-}
 ```
 
-将上一节中的35、36行代码做如下修改：
-
-```c++
-// 原代码
-resize(shrink, enlarge1, Size(), fx, fy, InterpolationFlags::INTER_NEAREST);
-resize(shrink, enlarge2, Size(), fx, fy, InterpolationFlags::INTER_LINEAR);
-// 修改后
-inter_nearest(shrink, enlarge1, fx, fy);
-inter_linear(shrink, enlarge2, fx, fy);
-```
-
-可得到两种插值算法将缩小0.4倍后的图片放大1.5倍的结果。
+使用上述方法可得到两种插值算法将缩小0.4倍后的图片放大1.5倍的结果。
 
 1.5倍放大，最近邻插值：
 

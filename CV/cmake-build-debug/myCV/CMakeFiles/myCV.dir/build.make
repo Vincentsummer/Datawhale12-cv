@@ -81,17 +81,43 @@ myCV/CMakeFiles/myCV.dir/interpolation.cpp.o.provides: myCV/CMakeFiles/myCV.dir/
 myCV/CMakeFiles/myCV.dir/interpolation.cpp.o.provides.build: myCV/CMakeFiles/myCV.dir/interpolation.cpp.o
 
 
+myCV/CMakeFiles/myCV.dir/translation.cpp.o: myCV/CMakeFiles/myCV.dir/flags.make
+myCV/CMakeFiles/myCV.dir/translation.cpp.o: ../myCV/translation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/Datawhale12-cv/CV/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object myCV/CMakeFiles/myCV.dir/translation.cpp.o"
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug/myCV && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myCV.dir/translation.cpp.o -c /home/vincent/Datawhale12-cv/CV/myCV/translation.cpp
+
+myCV/CMakeFiles/myCV.dir/translation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myCV.dir/translation.cpp.i"
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug/myCV && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vincent/Datawhale12-cv/CV/myCV/translation.cpp > CMakeFiles/myCV.dir/translation.cpp.i
+
+myCV/CMakeFiles/myCV.dir/translation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myCV.dir/translation.cpp.s"
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug/myCV && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vincent/Datawhale12-cv/CV/myCV/translation.cpp -o CMakeFiles/myCV.dir/translation.cpp.s
+
+myCV/CMakeFiles/myCV.dir/translation.cpp.o.requires:
+
+.PHONY : myCV/CMakeFiles/myCV.dir/translation.cpp.o.requires
+
+myCV/CMakeFiles/myCV.dir/translation.cpp.o.provides: myCV/CMakeFiles/myCV.dir/translation.cpp.o.requires
+	$(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/translation.cpp.o.provides.build
+.PHONY : myCV/CMakeFiles/myCV.dir/translation.cpp.o.provides
+
+myCV/CMakeFiles/myCV.dir/translation.cpp.o.provides.build: myCV/CMakeFiles/myCV.dir/translation.cpp.o
+
+
 # Object files for target myCV
 myCV_OBJECTS = \
-"CMakeFiles/myCV.dir/interpolation.cpp.o"
+"CMakeFiles/myCV.dir/interpolation.cpp.o" \
+"CMakeFiles/myCV.dir/translation.cpp.o"
 
 # External object files for target myCV
 myCV_EXTERNAL_OBJECTS =
 
 myCV/libmyCV.a: myCV/CMakeFiles/myCV.dir/interpolation.cpp.o
+myCV/libmyCV.a: myCV/CMakeFiles/myCV.dir/translation.cpp.o
 myCV/libmyCV.a: myCV/CMakeFiles/myCV.dir/build.make
 myCV/libmyCV.a: myCV/CMakeFiles/myCV.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vincent/Datawhale12-cv/CV/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmyCV.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vincent/Datawhale12-cv/CV/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmyCV.a"
 	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug/myCV && $(CMAKE_COMMAND) -P CMakeFiles/myCV.dir/cmake_clean_target.cmake
 	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug/myCV && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myCV.dir/link.txt --verbose=$(VERBOSE)
 
@@ -101,6 +127,7 @@ myCV/CMakeFiles/myCV.dir/build: myCV/libmyCV.a
 .PHONY : myCV/CMakeFiles/myCV.dir/build
 
 myCV/CMakeFiles/myCV.dir/requires: myCV/CMakeFiles/myCV.dir/interpolation.cpp.o.requires
+myCV/CMakeFiles/myCV.dir/requires: myCV/CMakeFiles/myCV.dir/translation.cpp.o.requires
 
 .PHONY : myCV/CMakeFiles/myCV.dir/requires
 

@@ -183,6 +183,12 @@
 		<Unit filename="/home/vincent/Datawhale12-cv/CV/myCV/interpolation.h">
 			<Option target="myCV"/>
 		</Unit>
+		<Unit filename="/home/vincent/Datawhale12-cv/CV/myCV/translation.cpp">
+			<Option target="myCV"/>
+		</Unit>
+		<Unit filename="/home/vincent/Datawhale12-cv/CV/myCV/translation.h">
+			<Option target="myCV"/>
+		</Unit>
 		<Unit filename="/home/vincent/Datawhale12-cv/CV/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -1,5 +1,6 @@
 set(myCV_SRC
         interpolation.cpp
+        translation.cpp
         )
 
 #add_executable(myCV ${myCV_SRC})
