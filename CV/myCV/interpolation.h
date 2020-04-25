@@ -5,8 +5,8 @@
 #ifndef CV_INTERPOLATION_H
 #define CV_INTERPOLATION_H
 
-#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
+#include "utils.h"
 
 using namespace std;
 

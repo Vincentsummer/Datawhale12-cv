@@ -5,8 +5,6 @@
 #ifndef CV_TRANSLATION_H
 #define CV_TRANSLATION_H
 
-#include <opencv2/opencv.hpp>
-
 #include "interpolation.h"
 
 using namespace cv;

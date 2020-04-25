@@ -196,6 +196,33 @@ interpolation.cpp.s:
 	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/interpolation.cpp.s
 .PHONY : interpolation.cpp.s
 
+tColor.o: tColor.cpp.o
+
+.PHONY : tColor.o
+
+# target to build an object file
+tColor.cpp.o:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/tColor.cpp.o
+.PHONY : tColor.cpp.o
+
+tColor.i: tColor.cpp.i
+
+.PHONY : tColor.i
+
+# target to preprocess a source file
+tColor.cpp.i:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/tColor.cpp.i
+.PHONY : tColor.cpp.i
+
+tColor.s: tColor.cpp.s
+
+.PHONY : tColor.s
+
+# target to generate assembly for a file
+tColor.cpp.s:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/tColor.cpp.s
+.PHONY : tColor.cpp.s
+
 translation.o: translation.cpp.o
 
 .PHONY : translation.o
@@ -239,6 +266,9 @@ help:
 	@echo "... interpolation.o"
 	@echo "... interpolation.i"
 	@echo "... interpolation.s"
+	@echo "... tColor.o"
+	@echo "... tColor.i"
+	@echo "... tColor.s"
 	@echo "... translation.o"
 	@echo "... translation.i"
 	@echo "... translation.s"

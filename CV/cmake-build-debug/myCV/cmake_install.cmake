@@ -39,7 +39,9 @@ endif()
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/CV/myCV" TYPE FILE FILES
     "/home/vincent/Datawhale12-cv/CV/myCV/interpolation.h"
+    "/home/vincent/Datawhale12-cv/CV/myCV/tColor.h"
     "/home/vincent/Datawhale12-cv/CV/myCV/translation.h"
+    "/home/vincent/Datawhale12-cv/CV/myCV/utils.h"
     )
 endif()
 

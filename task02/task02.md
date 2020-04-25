@@ -346,7 +346,7 @@ void vincent::warpAffine(Mat &src, Mat &tar, Mat &M, Size dsize, int flags)
             for (int j = 0; j < tar.cols; ++j){
                 T.at<float>(0,0) = j;
                 T.at<float>(0,1) = i;
-                // 反向映射, 求目标图像当前点(j,i)在源图像的对应点。
+                // 反向映射, 求目标图像当前点(i,j)在源图像的对应点。
                 Mat S = T * M.inv();
                 // 插值计算
                 float x = S.at<float>(0,0), y = S.at<float>(0,1);

@@ -17,7 +17,7 @@
 using namespace cv;
 using namespace std;
 
-string yuner = "../image/yuner.jpg";
+const static string yuner = "../image/yuner.jpg";
 
 int resizeTest()
 {

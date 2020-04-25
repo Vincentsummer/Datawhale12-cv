@@ -3,10 +3,12 @@
 
 CMakeFiles/CV.dir/main.cpp.o: ../main.cpp
 CMakeFiles/CV.dir/main.cpp.o: ../myCV/interpolation.h
+CMakeFiles/CV.dir/main.cpp.o: ../myCV/tColor.h
 CMakeFiles/CV.dir/main.cpp.o: ../myCV/translation.h
+CMakeFiles/CV.dir/main.cpp.o: ../myCV/utils.h
 CMakeFiles/CV.dir/main.cpp.o: ../task01/resizeTest.h
 CMakeFiles/CV.dir/main.cpp.o: ../task02/transTest.h
-CMakeFiles/CV.dir/main.cpp.o: ../test.h
+CMakeFiles/CV.dir/main.cpp.o: ../task03/colorTest.h
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/calib3d.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/affine.hpp
@@ -14,7 +16,6 @@ CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/async.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/base.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/check.hpp
-CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/core.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/cuda.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/cuda_types.hpp

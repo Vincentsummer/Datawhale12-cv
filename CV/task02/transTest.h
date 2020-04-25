@@ -9,17 +9,16 @@
 #ifndef CV_TRANSTEST_H
 #define CV_TRANSTEST_H
 
-#include <opencv2/opencv.hpp>
 #include "../myCV/translation.h"
 
 using namespace cv;
 using namespace std;
 
-const static string lena = "../image/lena2.jpg";
+const static string lena2 = "../image/lena2.jpg";
 
 void myTransTest()
 {
-    Mat src = imread(lena);
+    Mat src = imread(lena2);
     Mat tar;
     Size tar_sz = src.size();
     // 指定旋转中心（图像中点）
