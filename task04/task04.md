@@ -84,7 +84,7 @@ $$
 
 　Boxfilter的原理有点类似Integral Image，而且比它还要快，但是实现步骤比较复杂。在计算矩形特征之前，Boxfilter与Integral Image都需要对图像进行初始化（即对数组A赋值），不同于Integral Image，Boxfilter的数组A中的每个元素的值是该像素邻域内的像素和（或像素平方和），在需要求某个矩形内像素和的时候，直接访问数组中对应的位置就可以了。因此可以看出它的复杂度是 $O(1)$ 。
 
-<img src="task04.assets/271705086777048.gif" alt="img" style="zoom: 67%;" />
+<img src="task04.assets/271705086777048.gif" alt="271705086777048" style="zoom:67%;" />
 
 Boxfilter的初始化过程如下：
 
