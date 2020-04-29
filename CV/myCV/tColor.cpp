@@ -8,14 +8,15 @@ void vincent::tColor(cv::Mat &src, cv::Mat &tar, int code)
 {
     switch (code)
     {
-        case CV_RGB2GREY : tar = RGB2Grey(src); break;
-        case CV_RGB2HSV : tar = RGB2HSV(src); break;
-        case CV_HSV2RGB : tar = HSV2RGB(src); break;
-        default: break;
+        case CV_RGB2GRAY        : tar = RGB2Gray(src); break;
+        case CV_RGB2GRAY_ACC    : tar = RGB2Gray(src, true); break;
+        case CV_RGB2HSV         : tar = RGB2HSV(src); break;
+        case CV_HSV2RGB         : tar = HSV2RGB(src); break;
+        default                 : break;
     }
 }
 
-cv::Mat vincent::RGB2Grey(cv::Mat src, bool accelerate)
+cv::Mat vincent::RGB2Gray(cv::Mat src, bool accelerate)
 {
     CV_Assert(src.channels() == 3);
     cv::Mat tar = cv::Mat::zeros(src.size(), CV_8UC1);

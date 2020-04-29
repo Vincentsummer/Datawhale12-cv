@@ -169,6 +169,33 @@ myCV/fast:
 	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/build
 .PHONY : myCV/fast
 
+filter.o: filter.cpp.o
+
+.PHONY : filter.o
+
+# target to build an object file
+filter.cpp.o:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/filter.cpp.o
+.PHONY : filter.cpp.o
+
+filter.i: filter.cpp.i
+
+.PHONY : filter.i
+
+# target to preprocess a source file
+filter.cpp.i:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/filter.cpp.i
+.PHONY : filter.cpp.i
+
+filter.s: filter.cpp.s
+
+.PHONY : filter.s
+
+# target to generate assembly for a file
+filter.cpp.s:
+	cd /home/vincent/Datawhale12-cv/CV/cmake-build-debug && $(MAKE) -f myCV/CMakeFiles/myCV.dir/build.make myCV/CMakeFiles/myCV.dir/filter.cpp.s
+.PHONY : filter.cpp.s
+
 interpolation.o: interpolation.cpp.o
 
 .PHONY : interpolation.o
@@ -263,6 +290,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... myCV"
+	@echo "... filter.o"
+	@echo "... filter.i"
+	@echo "... filter.s"
 	@echo "... interpolation.o"
 	@echo "... interpolation.i"
 	@echo "... interpolation.s"

@@ -177,6 +177,12 @@
 		<Unit filename="/home/vincent/Datawhale12-cv/CV/main.cpp">
 			<Option target="CV"/>
 		</Unit>
+		<Unit filename="/home/vincent/Datawhale12-cv/CV/myCV/filter.cpp">
+			<Option target="myCV"/>
+		</Unit>
+		<Unit filename="/home/vincent/Datawhale12-cv/CV/myCV/filter.h">
+			<Option target="myCV"/>
+		</Unit>
 		<Unit filename="/home/vincent/Datawhale12-cv/CV/myCV/interpolation.cpp">
 			<Option target="myCV"/>
 		</Unit>

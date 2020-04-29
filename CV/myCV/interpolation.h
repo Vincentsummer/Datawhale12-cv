@@ -6,7 +6,7 @@
 #define CV_INTERPOLATION_H
 
 #include <iostream>
-#include "utils.h"
+#include "mycv.h"
 
 using namespace std;
 
@@ -34,8 +34,8 @@ namespace vincent
 
         Fun operator [] (int i)
         {
-            if (i < funs.size()) return funs[i];
-            else throw "out of Interpolation!";
+            CV_Assert(i < funs.size());
+            return funs[i];
         }
 
     private:

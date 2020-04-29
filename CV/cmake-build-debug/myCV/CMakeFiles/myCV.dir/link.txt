@@ -1,2 +1,2 @@
-/usr/bin/ar qc libmyCV.a  CMakeFiles/myCV.dir/interpolation.cpp.o CMakeFiles/myCV.dir/translation.cpp.o CMakeFiles/myCV.dir/tColor.cpp.o
+/usr/bin/ar qc libmyCV.a  CMakeFiles/myCV.dir/interpolation.cpp.o CMakeFiles/myCV.dir/translation.cpp.o CMakeFiles/myCV.dir/tColor.cpp.o CMakeFiles/myCV.dir/filter.cpp.o
 /usr/bin/ranlib libmyCV.a

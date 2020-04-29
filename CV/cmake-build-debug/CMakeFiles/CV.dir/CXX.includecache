@@ -7,36 +7,44 @@
 #IncludeRegexTransform: 
 
 /home/vincent/Datawhale12-cv/CV/main.cpp
-task03/colorTest.h
-/home/vincent/Datawhale12-cv/CV/task03/colorTest.h
-task01/resizeTest.h
-/home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
-task02/transTest.h
-/home/vincent/Datawhale12-cv/CV/task02/transTest.h
+task/05_segmentTest.h
+/home/vincent/Datawhale12-cv/CV/task/05_segmentTest.h
+task/04_filterTest.h
+/home/vincent/Datawhale12-cv/CV/task/04_filterTest.h
+task/03_colorTest.h
+/home/vincent/Datawhale12-cv/CV/task/03_colorTest.h
+task/01_resizeTest.h
+/home/vincent/Datawhale12-cv/CV/task/01_resizeTest.h
+task/02_transTest.h
+/home/vincent/Datawhale12-cv/CV/task/02_transTest.h
 iostream
 -
+
+/home/vincent/Datawhale12-cv/CV/myCV/filter.h
+mycv.h
+/home/vincent/Datawhale12-cv/CV/myCV/mycv.h
 
 /home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
 iostream
 -
-utils.h
-/home/vincent/Datawhale12-cv/CV/myCV/utils.h
+mycv.h
+/home/vincent/Datawhale12-cv/CV/myCV/mycv.h
 
-/home/vincent/Datawhale12-cv/CV/myCV/tColor.h
-utils.h
-/home/vincent/Datawhale12-cv/CV/myCV/utils.h
-
-/home/vincent/Datawhale12-cv/CV/myCV/translation.h
-interpolation.h
-/home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
-
-/home/vincent/Datawhale12-cv/CV/myCV/utils.h
+/home/vincent/Datawhale12-cv/CV/myCV/mycv.h
 opencv2/opencv.hpp
 -
 opencv2/highgui/highgui.hpp
 -
 
-/home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
+/home/vincent/Datawhale12-cv/CV/myCV/tColor.h
+mycv.h
+/home/vincent/Datawhale12-cv/CV/myCV/mycv.h
+
+/home/vincent/Datawhale12-cv/CV/myCV/translation.h
+interpolation.h
+/home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
+
+/home/vincent/Datawhale12-cv/CV/task/01_resizeTest.h
 opencv2/opencv.hpp
 -
 iostream
@@ -44,17 +52,35 @@ iostream
 ../myCV/interpolation.h
 /home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
 
-/home/vincent/Datawhale12-cv/CV/task02/transTest.h
+/home/vincent/Datawhale12-cv/CV/task/02_transTest.h
 ../myCV/translation.h
 /home/vincent/Datawhale12-cv/CV/myCV/translation.h
 
-/home/vincent/Datawhale12-cv/CV/task03/colorTest.h
-opencv2/opencv.hpp
+/home/vincent/Datawhale12-cv/CV/task/03_colorTest.h
+utils.h
+/home/vincent/Datawhale12-cv/CV/task/utils.h
+../myCV/tColor.h
+/home/vincent/Datawhale12-cv/CV/myCV/tColor.h
+iostream
+-
+
+/home/vincent/Datawhale12-cv/CV/task/04_filterTest.h
+../myCV/filter.h
+/home/vincent/Datawhale12-cv/CV/myCV/filter.h
+
+/home/vincent/Datawhale12-cv/CV/task/05_segmentTest.h
+utils.h
+/home/vincent/Datawhale12-cv/CV/task/utils.h
+
+/home/vincent/Datawhale12-cv/CV/task/utils.h
+opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
 -
-../myCV/tColor.h
-/home/vincent/Datawhale12-cv/CV/myCV/tColor.h
+opencv2/imgproc/imgproc.hpp
+-
+string
+-
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
@@ -127,6 +153,10 @@ opencv2/core/check.hpp
 /usr/local/include/opencv4/opencv2/core/check.hpp
 opencv2/core/base.hpp
 -
+
+/usr/local/include/opencv4/opencv2/core/core.hpp
+opencv2/core.hpp
+/usr/local/include/opencv4/opencv2/core/opencv2/core.hpp
 
 /usr/local/include/opencv4/opencv2/core/cuda.hpp
 opencv2/core.hpp
@@ -903,6 +933,10 @@ opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/imgproc.hpp
 opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp
+
+/usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
+opencv2/imgproc.hpp
+/usr/local/include/opencv4/opencv2/imgproc/opencv2/imgproc.hpp
 
 /usr/local/include/opencv4/opencv2/ml.hpp
 opencv2/core.hpp

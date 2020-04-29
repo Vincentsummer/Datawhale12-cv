@@ -3,13 +3,17 @@
 
 CMakeFiles/CV.dir/main.cpp.o
  /home/vincent/Datawhale12-cv/CV/main.cpp
+ /home/vincent/Datawhale12-cv/CV/myCV/filter.h
  /home/vincent/Datawhale12-cv/CV/myCV/interpolation.h
+ /home/vincent/Datawhale12-cv/CV/myCV/mycv.h
  /home/vincent/Datawhale12-cv/CV/myCV/tColor.h
  /home/vincent/Datawhale12-cv/CV/myCV/translation.h
- /home/vincent/Datawhale12-cv/CV/myCV/utils.h
- /home/vincent/Datawhale12-cv/CV/task01/resizeTest.h
- /home/vincent/Datawhale12-cv/CV/task02/transTest.h
- /home/vincent/Datawhale12-cv/CV/task03/colorTest.h
+ /home/vincent/Datawhale12-cv/CV/task/01_resizeTest.h
+ /home/vincent/Datawhale12-cv/CV/task/02_transTest.h
+ /home/vincent/Datawhale12-cv/CV/task/03_colorTest.h
+ /home/vincent/Datawhale12-cv/CV/task/04_filterTest.h
+ /home/vincent/Datawhale12-cv/CV/task/05_segmentTest.h
+ /home/vincent/Datawhale12-cv/CV/task/utils.h
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/affine.hpp
@@ -17,6 +21,7 @@ CMakeFiles/CV.dir/main.cpp.o
  /usr/local/include/opencv4/opencv2/core/base.hpp
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
  /usr/local/include/opencv4/opencv2/core/check.hpp
+ /usr/local/include/opencv4/opencv2/core/core.hpp
  /usr/local/include/opencv4/opencv2/core/cuda.hpp
  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp
@@ -89,6 +94,7 @@ CMakeFiles/CV.dir/main.cpp.o
  /usr/local/include/opencv4/opencv2/highgui/highgui.hpp
  /usr/local/include/opencv4/opencv2/imgcodecs.hpp
  /usr/local/include/opencv4/opencv2/imgproc.hpp
+ /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
  /usr/local/include/opencv4/opencv2/ml.hpp
  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv4/opencv2/objdetect.hpp

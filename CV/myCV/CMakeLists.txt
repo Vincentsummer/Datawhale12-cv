@@ -2,6 +2,7 @@ set(myCV_SRC
         interpolation.cpp
         translation.cpp
         tColor.cpp
+        filter.cpp
         )
 
 #add_executable(myCV ${myCV_SRC})
