@@ -2,6 +2,7 @@
 // Created by vincent on 20-4-19.
 //
 
+#include "task/06_edgeDetectionTest.h"
 #include "task/05_segmentTest.h"
 #include "task/04_filterTest.h"
 #include "task/03_colorTest.h"
@@ -13,7 +14,7 @@ using namespace std;
 
 int main()
 {
-//    otsuTest();
-    adaptiveThresholdTest();
+//    sobelTest();
+    cannyTest();
     return 0;
 }

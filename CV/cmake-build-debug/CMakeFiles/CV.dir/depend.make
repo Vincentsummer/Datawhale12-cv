@@ -12,6 +12,7 @@ CMakeFiles/CV.dir/main.cpp.o: ../task/02_transTest.h
 CMakeFiles/CV.dir/main.cpp.o: ../task/03_colorTest.h
 CMakeFiles/CV.dir/main.cpp.o: ../task/04_filterTest.h
 CMakeFiles/CV.dir/main.cpp.o: ../task/05_segmentTest.h
+CMakeFiles/CV.dir/main.cpp.o: ../task/06_edgeDetectionTest.h
 CMakeFiles/CV.dir/main.cpp.o: ../task/utils.h
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/calib3d.hpp
 CMakeFiles/CV.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core.hpp

@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/vincent/Datawhale12-cv/CV/main.cpp
+task/06_edgeDetectionTest.h
+/home/vincent/Datawhale12-cv/CV/task/06_edgeDetectionTest.h
 task/05_segmentTest.h
 /home/vincent/Datawhale12-cv/CV/task/05_segmentTest.h
 task/04_filterTest.h
@@ -69,6 +71,10 @@ iostream
 /home/vincent/Datawhale12-cv/CV/myCV/filter.h
 
 /home/vincent/Datawhale12-cv/CV/task/05_segmentTest.h
+utils.h
+/home/vincent/Datawhale12-cv/CV/task/utils.h
+
+/home/vincent/Datawhale12-cv/CV/task/06_edgeDetectionTest.h
 utils.h
 /home/vincent/Datawhale12-cv/CV/task/utils.h
 

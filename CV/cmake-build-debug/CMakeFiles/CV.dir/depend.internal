@@ -13,6 +13,7 @@ CMakeFiles/CV.dir/main.cpp.o
  /home/vincent/Datawhale12-cv/CV/task/03_colorTest.h
  /home/vincent/Datawhale12-cv/CV/task/04_filterTest.h
  /home/vincent/Datawhale12-cv/CV/task/05_segmentTest.h
+ /home/vincent/Datawhale12-cv/CV/task/06_edgeDetectionTest.h
  /home/vincent/Datawhale12-cv/CV/task/utils.h
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
